@@ -1,0 +1,2 @@
+{:{{name}}-example-port "8000"
+ :{{name}}-my-webapp-port "8080"}
