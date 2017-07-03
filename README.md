@@ -1,6 +1,9 @@
 # magic
 
-A Leiningen template for FIXME.
+[![Clojars Project](https://img.shields.io/clojars/v/boxp/magic.svg)](https://clojars.org/boxp/magic)
+[![CircleCI](https://circleci.com/gh/boxp/magic.svg?style=svg)](https://circleci.com/gh/boxp/magic)
+
+A Leiningen template for microservices based on stuartsierra/Component.
 
 ## Usage
 
