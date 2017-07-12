@@ -1,14 +1,11 @@
-# magic
-
-[![Clojars Project](https://img.shields.io/clojars/v/boxp/magic.svg)](https://clojars.org/boxp/magic)
-[![CircleCI](https://circleci.com/gh/boxp/magic.svg?style=svg)](https://circleci.com/gh/boxp/magic)
+# spellcard
 
 A Leiningen template for microservices based on stuartsierra/Component.
 
 ## Usage
 
 ```sh
-lein new magic <project-name> <gcp-project-id> <gke-cluster-name>
+lein new spellcard <project-name> <gcp-project-id> <gke-cluster-name>
 ```
 
 ## License

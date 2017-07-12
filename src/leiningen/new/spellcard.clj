@@ -1,15 +1,15 @@
-(ns leiningen.new.magic
+(ns leiningen.new.spellcard
   (:require [leiningen.new.templates :refer [renderer name-to-path ->files]]
             [leiningen.core.main :as main]))
 
-(def render (renderer "magic"))
+(def render (renderer "spellcard"))
 
 (defn name-to-screaming-snake
   [kebab]
   (-> (clojure.string/upper-case kebab)
       (clojure.string/replace #"\-" "_")))
 
-(defn magic
+(defn spellcard
   "FIXME: write documentation"
   [name project-id cluster-name]
   (let [data {:name name
@@ -17,7 +17,7 @@
               :screaming-snake (name-to-screaming-snake name)
               :project-id project-id
               :cluster-name cluster-name}]
-    (main/info "Generating fresh 'lein new' magic project.")
+    (main/info "Generating fresh 'lein new' spellcard project.")
     (->files data
              ["src/{{sanitized}}/infra/datasource/example.clj" (render "example-datasource.clj" data)]
              ["src/{{sanitized}}/infra/repository/example.clj" (render "example-repository.clj" data)]
