@@ -1,5 +1,7 @@
 # spellcard
 
+[![Clojars Project](https://img.shields.io/clojars/v/spellcard/lein-template.svg)](https://clojars.org/spellcard/lein-template)
+
 A Leiningen template for microservices based on stuartsierra/Component.
 
 ## Usage
