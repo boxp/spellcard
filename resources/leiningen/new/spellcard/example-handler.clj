@@ -3,7 +3,7 @@
             [cheshire.core :refer [generate-string]]
             [{{name}}.domain.usecase.example :as example-usecase]))
 
-(defn get-message
+(defn index
   [{:keys [example-usecase] :as comp}]
   (-> {:message (example-usecase/get-message example-usecase)}
       generate-string))

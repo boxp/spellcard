@@ -11,7 +11,7 @@
 (defn main-routes
   [{:keys [my-webapp-handler] :as comp}]
   (routes
-    (GET "/message" [req] (handler/get-message my-webapp-handler))
+    (GET "/" [req] (handler/index my-webapp-handler))
     (route/not-found "<h1>404 page not found</h1>")))
 
 (defn app
