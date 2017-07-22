@@ -16,6 +16,6 @@ spec:
         - containerPort: 8080
         env:
           - name: {{screaming-snake}}_MY_WEBAPP_PORT
-            value: 8080
+            value: "8080"
           - name: {{screaming-snake}}_EXAMPLE_PORT
-            value: 8000
+            value: "8000"
