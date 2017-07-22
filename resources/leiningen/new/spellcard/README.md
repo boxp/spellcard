@@ -22,7 +22,8 @@ lein run
 
 1. Add Integration with CircleCI to your GitHub repository.
 2. Add your Google Application Credentials as `$ACCT_AUTH`.
-3. Just `git push` commits.
+3. `chmod +x deploy.sh`
+4. Just `git push` commits.
 
 ## License
 
