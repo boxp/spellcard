@@ -1,0 +1,8 @@
+version: "2"
+services:
+  {{name}}:
+    image: asia.gcr.io/${PROJECT_NAME}/{{name}}:$CIRCLE_SHA1
+    environment:
+      {{screaming-snake}}_EXAMPLE_PORT: "8000"
+      {{screaming-snake}}_MY_WEBAPP_PORT: "8080"
+    command: /bin/bash -c "lein test"

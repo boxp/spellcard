@@ -31,8 +31,9 @@
              ["k8s/deployment.yml" (render "deployment.yml" data)]
              ["k8s/service.yml" (render "service.yml" data)]
              ["Dockerfile" (render "Dockerfile" data)]
-             ["circle.yml" (render "circle.yml" data)]
+             [".circleci/config.yml" (render "config.yml" data)]
              ["deploy.sh" (render "deploy.sh" data)]
+             ["docker-compose.test.yml" (render "docker-compose.test.yml" data)]
              [".lein-env" (render ".lein-env" data)]
              ["LICENSE" (render "LICENSE" data)]
              ["README.md" (render "README.md" data)])))
