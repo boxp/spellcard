@@ -11,7 +11,7 @@ spec:
     spec:
       containers:
       - name: {{name}}
-        image: asia.gcr.io/${PROJECT_ID}/{{name}}:${REVISION_ID}
+        image: gcr.io/${PROJECT_ID}/{{name}}:${REVISION_ID}
         ports:
         - containerPort: 8080
         env:
