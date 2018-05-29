@@ -1,0 +1,34 @@
+
+
+steps:
+
+# Build
+- name: 'gcr.io/cloud-builders/docker'
+  args: [ 'build', '-t', 'gcr.io/$PROJECT_ID/{{name}}:$REVISION_ID', '-f', 'Dockerfile', '.' ]
+
+# Push
+- name: 'gcr.io/cloud-builders/docker'
+  args: ["push", "gcr.io/$PROJECT_ID/{{name}}:$REVISION_ID"]
+
+# Apply environment variable
+- name: 'loicmahieu/alpine-envsubst'
+  entrypoint: 'sh'
+  env:
+  - "REVISION_ID=$REVISION_ID"
+  - "PROJECT_ID=$PROJECT_ID"
+  args:
+  - '-c'
+  - |
+    envsubst < k8s/deployment.yml > deployment.yml
+    envsubst < k8s/service.yml > service.yml
+
+# Deploy
+- name: 'gcr.io/cloud-builders/gcloud'
+  entrypoint: 'bash'
+  args:
+  - '-c'
+  - |
+    gcloud config set container/use_client_certificate True
+    gcloud container clusters get-credentials {{cluster-name}} --zone asia-northeast1-a
+    kubectl apply -f deployment.yml --record
+    kubectl apply -f service.yml

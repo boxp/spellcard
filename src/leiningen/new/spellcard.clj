@@ -11,11 +11,10 @@
 
 (defn spellcard
   "FIXME: write documentation"
-  [name project-id cluster-name]
+  [name cluster-name]
   (let [data {:name name
               :sanitized (name-to-path name)
               :screaming-snake (name-to-screaming-snake name)
-              :project-id project-id
               :cluster-name cluster-name}]
     (main/info "Generating fresh 'lein new' spellcard project.")
     (->files data
@@ -31,9 +30,7 @@
              ["k8s/deployment.yml" (render "deployment.yml" data)]
              ["k8s/service.yml" (render "service.yml" data)]
              ["Dockerfile" (render "Dockerfile" data)]
-             [".circleci/config.yml" (render "config.yml" data)]
-             ["deploy.sh" (render "deploy.sh" data)]
-             ["docker-compose.test.yml" (render "docker-compose.test.yml" data)]
+             ["cloudbuild.yaml" (render "cloudbuild.yaml" data)]
              [".lein-env" (render ".lein-env" data)]
              ["LICENSE" (render "LICENSE" data)]
              ["README.md" (render "README.md" data)])))

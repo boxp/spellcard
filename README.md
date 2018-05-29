@@ -7,7 +7,7 @@ A Leiningen template for microservices based on stuartsierra/Component.
 ## Usage
 
 ```sh
-lein new spellcard <project-name> <gcp-project-id> <gke-cluster-name>
+lein new spellcard <project-name> <gke-cluster-name>
 ```
 
 ## License
