@@ -1,4 +1,4 @@
-(defproject spellcard/lein-template  "0.1.0"
+(defproject spellcard/lein-template  "0.2.0"
   :description "A Leiningen template for microservices based on stuartsierra/Component"
   :url "https://boxp.tk"
   :license {:name "Eclipse Public License"
