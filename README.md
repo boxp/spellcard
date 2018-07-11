@@ -2,13 +2,19 @@
 
 [![Clojars Project](https://img.shields.io/clojars/v/spellcard/lein-template.svg)](https://clojars.org/spellcard/lein-template)
 
-A Leiningen template for microservices based on stuartsierra/Component.
+A Leiningen template for k8s deployment automation.
 
 ## Usage
 
 ```sh
 lein new spellcard <project-name> <gke-cluster-name>
 ```
+
+## TODO
+
+- [x] Add support EKS
+- [x] Add support profile hint parameters like [duct-framework/duct](https://github.com/duct-framework/duct)
+- [x] Add support Integrant
 
 ## License
 
