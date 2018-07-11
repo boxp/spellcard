@@ -12,9 +12,9 @@ lein new spellcard <project-name> <gke-cluster-name>
 
 ## TODO
 
-- [x] Add support EKS
-- [x] Add support profile hint parameters like [duct-framework/duct](https://github.com/duct-framework/duct)
-- [x] Add support Integrant
+- [ ] Add support EKS
+- [ ] Add support profile hint parameters like [duct-framework/duct](https://github.com/duct-framework/duct)
+- [ ] Add support Integrant
 
 ## License
 
