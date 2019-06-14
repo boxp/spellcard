@@ -11,7 +11,7 @@
                  [ring/ring-json "0.4.0"]
                  [compojure "1.6.1"]
                  [cheshire "5.8.1"]
-                 [org.clojure/tools.namespace "0.2.10"]]
+                 [org.clojure/tools.namespace "0.3.0"]]
   :profiles
   {:dev {:source-paths ["src" "dev"]}
    :uberjar {:main {{name}}.system}})
