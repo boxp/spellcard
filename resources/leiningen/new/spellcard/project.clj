@@ -10,7 +10,7 @@
                  [ring "1.7.1"]
                  [ring/ring-json "0.4.0"]
                  [compojure "1.6.1"]
-                 [cheshire "5.8.1"]
+                 [cheshire "5.12.0"]
                  [org.clojure/tools.namespace "0.3.0"]]
   :profiles
   {:dev {:source-paths ["src" "dev"]}
